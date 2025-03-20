@@ -79,7 +79,9 @@
                 <h3>Experiências</h3>
                 <p> Maratonas de programação:<br/>
                   (ICPC, OBI, Pizza++);<br/>
-                    Monitor de Programação Procedimental;</p>
+                    Monitor de Programação Procedimental;<br/>
+                  Desenvolvedor Web Freelancer;
+                  </p>
               </div>
               <div class="details-container">
                 <img
@@ -97,13 +99,17 @@
             <div class="text-container">
               <p>
                 <li>
-                    Atualmente estudando Ciência da Computação na Universidade Federal de Uberlândia (UFU);</br>
+                    Estudando Ciência da Computação na Universidade Federal de Uberlândia (UFU);</br>
                 </li>
                 <li>
-                    Tenho um grande interesse na áreas de computação e programação, com foco em desenvolvimento backend e análise de dados e fascinado por AI;</br>                </li>
+                    Tenho um grande interesse na áreas de computação e programação, com foco em desenvolvimento web, backend e análise de dados.</br>
+                </li>
                 <li>
                     Participo de maratonas de programação, sempre buscando aperfeiçoar minhas habilidades e aprender novas técnicas;
                 </li>
+                <li>
+                  Atualmente desenvolvendo projetos web com a @uaiweb_. Estou desenvolvendo um site de cursos digitais com React e Firebase;
+              </li>
               </p>
             </div>
           </div>
@@ -202,6 +208,17 @@
                     <p>Intermediário</p>
                   </div>
                 </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Firebase</h3>
+                    <p>Básico</p>
+                  </div>
+                </article>
               </div>
             </div>
             <div class="details-container">
@@ -214,7 +231,18 @@
                       class="icon"
                     />
                     <div>
-                      <h3>HTML</h3>
+                      <h3>HTML e Css</h3>
+                      <p>intermediário</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Tailwind</h3>
                       <p>Básico</p>
                     </div>
                   </article>
@@ -225,19 +253,8 @@
                       class="icon"
                     />
                     <div>
-                      <h3>CSS</h3>
-                      <p>Básico</p>
-                    </div>
-                  </article>
-                  <article>
-                    <img
-                      src="./assets/checkmark.png"
-                      alt="Experience icon"
-                      class="icon"
-                    />
-                    <div>
-                      <h3>React JS</h3>
-                      <p>Básico</p>
+                      <h3>ReactJS e JS</h3>
+                      <p>Intermediário</p>
                     </div>
                   </article>
                   <article>
@@ -294,6 +311,7 @@
             <div class="details-container color-container">
               <div class="article-container">
                 <img
+                  class="img-projects"
                   src="./assets/spring.svg"
                   alt="MovieLog Spring"
                   class="project-img"
@@ -303,13 +321,13 @@
               <div class="btn-container">
                 <button
                   class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/oMaDaSa/MovieLog-DIO-Bootcamp'"
+                  onclick="window.open('https://github.com/oMaDaSa/MovieLog-DIO-Bootcamp', '_blank')"
                 >
                   Github
                 </button>
                 <button
                   class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://movielog.onrender.com/swagger-ui.html'"
+                  onclick="window.open('https://movielog.onrender.com/swagger-ui.html', '_blank')"
                 >
                   Live Demo
                 </button>
@@ -317,28 +335,21 @@
             </div>
             <div class="details-container color-container">
               <div class="article-container">
-                <img
-                  src="./assets/wip.png"
+                <img class="img-projects"
+                  src="./assets/superportacu.png"
                   alt="Project WIP"
                   class="project-img"
                 />
               </div>
-              <h2 class="experience-sub-title project-title">Em progresso</h2>
+              <h2 class="experience-sub-title project-title">Superport Açu</h2>
               <div class="btn-container">
-                <!---
                 <button
                   class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
+                  onclick="window.open('https://superportacu.com.br/', '_blank')"
+                  
                 >
-                  Github
+                  Site
                 </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Live Demo
-                </button>
-                -->
               </div>
             </div>
             
@@ -391,5 +402,37 @@
       </footer>
 
     <script src="script.js"></script>
+
+    <script>
+      // Função para verificar quando um elemento entra na viewport
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+    
+      // Função para animar números (contador)
+      function animateNumbers() {
+        const experienceItems = document.querySelectorAll('#experience article');
+        
+        experienceItems.forEach(item => {
+          const skillLevel = item.querySelector('p');
+          if (skillLevel && isInViewport(item) && !item.hasAttribute('data-animated')) {
+            item.setAttribute('data-animated', 'true');
+            item.classList.add('highlight-animation');
+          }
+        });
+      }
+    
+      // Verificar elementos ao rolar
+      window.addEventListener('scroll', function() {
+        animateNumbers();
+      });
+    </script>
+    
 </body>
 </html>
