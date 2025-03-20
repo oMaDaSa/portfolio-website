@@ -92,5 +92,9 @@
     .text-container {
         text-align: justify;
     }
+    .img-projects{
+        height: 300px;
+        width: 300px;
+    }
 }
 
