@@ -18,16 +18,16 @@
                 <li><a href = "#experience">Experiências</a></li>
                 <li><a href = "#projects">Projetos</a></li>
                 <li><a href = "#contact">Contato</a></li>
+                <li><button id="theme-toggle" class="theme-toggle">🌙</button></li>
             </ul>
         </div>
     </nav>
     <nav id="hamburger-nav">
         <div class="logo">Matheus Dantas</div>
+        <button id="theme-toggle-mobile" class="theme-toggle">🌙</button>
         <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+                <img src="./assets/hamburger_icon.svg" class="icon">
             </div>
             <div class="menu-links">
                 <li><a href = "#about" onclick="toggleMenu()">Sobre</a></li>
@@ -47,8 +47,8 @@
             <h1 class="title">Matheus Dantas</h1>
             <p class="section__text__p2">Computer Science Student</p>
             <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">Baixar CV</button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contato</button>
+                <button class="btn btn-color" onclick="window.open('./assets/resume.pdf')">Baixar CV</button>
+                <button class="btn btn-color" onclick="location.href='./#contact'">Contato</button>
             </div>
             <div id="socials-container">
                 <img src="./assets/linkedin.png" alt="My Linkedin" class="icon" 
@@ -320,13 +320,13 @@
               <h2 class="experience-sub-title project-title">MovieLog RESTful API</h2>
               <div class="btn-container">
                 <button
-                  class="btn btn-color-2 project-btn"
+                  class="btn btn-color"
                   onclick="window.open('https://github.com/oMaDaSa/MovieLog-DIO-Bootcamp', '_blank')"
                 >
                   Github
                 </button>
                 <button
-                  class="btn btn-color-2 project-btn"
+                  class="btn btn-color"
                   onclick="window.open('https://movielog.onrender.com/swagger-ui.html', '_blank')"
                 >
                   Live Demo
@@ -344,8 +344,6 @@
               <h2 class="experience-sub-title project-title">Em breve</h2>
               <div class="btn-container">
                 
-                  Site
-                </button>
               </div>
             </div>
             

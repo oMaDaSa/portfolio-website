@@ -96,5 +96,17 @@
         height: 300px;
         width: 300px;
     }
+
+    .theme-toggle {
+        font-size: 1.2rem;
+        padding: 0.3rem;
+    }
+    
+    /* Garantir que o botão apareça no menu mobile */
+    .menu-links li:last-child {
+        margin-top: 1rem;
+    }
+    
 }
+
 

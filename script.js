@@ -3,6 +3,12 @@ function toggleMenu() {
   const icon = document.querySelector(".hamburger-icon")
   menu.classList.toggle("open")
   icon.classList.toggle("open")
+
+  if(menu.classList.contains("open")){
+    icon.src = "assets/x_icon.svg";
+  }else{
+    icon.src = "assets/hamburger_icon.svg";
+  }
 }
 
 // Função para inicializar as animações
@@ -147,4 +153,37 @@ window.addEventListener("scroll", () => {
     ticking = true
   }
 })
+
+function toggleTheme() {
+  document.body.classList.toggle('dark-theme');
+  
+  // Salvar preferência
+  const isDark = document.body.classList.contains('dark-theme');
+  localStorage.setItem('darkTheme', isDark);
+  
+  // Atualizar ícone
+  const themeToggles = document.querySelectorAll('.theme-toggle');
+  themeToggles.forEach(btn => {
+      btn.textContent = isDark ? '☀️' : '🌙';
+  });
+}
+
+// Carregar tema salvo
+function loadTheme() {
+  const darkTheme = localStorage.getItem('darkTheme') === 'true';
+  if (darkTheme) {
+      document.body.classList.add('dark-theme');
+      document.querySelectorAll('.theme-toggle').forEach(btn => {
+          btn.textContent = '☀️';
+      });
+  }
+}
+
+// Adicionar event listeners
+document.querySelectorAll('.theme-toggle').forEach(btn => {
+  btn.addEventListener('click', toggleTheme);
+});
+
+// Carregar tema ao iniciar
+loadTheme();
 

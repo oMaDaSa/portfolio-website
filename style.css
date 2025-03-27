@@ -1,5 +1,23 @@
 /* General */
 
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --secondary-text-color: rgb(85, 85, 85);
+  --secondary-color: #f0f0f0;
+  --border-color: #cccccc;
+  --card-bg: #f8f8f8;
+}
+
+.dark-theme {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --secondary-text-color: rgb(177, 177, 177);
+  --secondary-color: #2d2d2d;
+  --border-color: #404040;
+  --card-bg: #262626;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
@@ -9,6 +27,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 html {
@@ -16,7 +37,7 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: var(--secondary-text-color);
 }
 
 /* Transition */
@@ -46,7 +67,7 @@ nav {
 }
 
 a {
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
   text-decoration-color: white;
 }
@@ -54,8 +75,16 @@ a {
 a:hover {
   color: grey;
   text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-underline-offset: 0.3rem;
+  text-decoration-color: var(--border-color);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  
 }
 
 .logo {
@@ -89,19 +118,27 @@ a:hover {
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: var(--bg-color);
   transition: all 0.3 ease-in-out;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-links {
   position: absolute;
-  top: 100%;
+  top: 120%;
   right: 0;
-  background-color: white;
-  width: fit-content;
+  background-color: var(--bg-color);
   max-height: 0;
   overflow: hidden;
   transition: all 0.3 ease-in-out;
+  z-index: 2;
+  border-radius: 15px;
+}
+
+.menu-links.open {
+ 
+  border: var(--secondary-text-color) 1px solid;
 }
 
 .menu-links a {
@@ -109,45 +146,36 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
   transition: all 0.3 ease-in-out;
+  line-height: 1.2; 
+}
+
+.menu-links a:hover{
+  color: var(--border-color);
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  text-decoration-color: var(--border-color);
+  content: "";
+  transition: width 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .menu-links li {
   list-style: none;
+  margin: 0.5rem 0;
 }
 
 .menu-links.open {
   max-height: 300px;
 }
 
-.hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
-}
-
-.hamburger-icon.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
+.dark-theme .icon {
+  filter: invert(1);
 }
 
 /* Sections */
-
 section {
   padding-top: 4hv;
   height: 96vh;
@@ -178,6 +206,7 @@ section {
 
 #profile__pic {
   border-radius: 50%;
+  z-index: 1;
 }
 
 .section__text {
@@ -233,32 +262,20 @@ section {
   border-radius: 2rem;
 }
 
-.btn-color-1,
-.btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+.btn-color{
+  border: 0.1rem solid;
+  border-color: var(--border-color);
+  color: var(--text-color);
+  background: var(--bg-color);
 }
 
-.btn-color-1:hover,
-.btn-color-2:hover {
+.btn-color:hover{
   cursor: pointer;
 }
 
-.btn-color-1,
-.btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
-}
-
-.btn-color-1:hover {
-  background: rgb(0, 0, 0);
-}
-
-.btn-color-2 {
-  background: none;
-}
-
-.btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
+.btn-color:hover {
+  background: var(--text-color);
+  color: var(--secondary-color);
 }
 
 .btn-container {
@@ -300,10 +317,10 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: var(--card-bg);
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border-color: var(--border-color);
   text-align: center;
 }
 
@@ -325,7 +342,7 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: var(--secondary-text-color);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -370,11 +387,6 @@ article .icon {
   position: relative;
 }
 
-.color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
-}
-
 .project-img {
   border-radius: 2rem;
   width: 90%;
@@ -383,12 +395,7 @@ article .icon {
 
 .project-title {
   margin: 1rem;
-  color: black;
-}
-
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+  color: var(--text-color);
 }
 
 /* Contact Section */
@@ -404,8 +411,8 @@ article .icon {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: 0.1rem solid;
+  border-color: var(--border-color);;
   background: (250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
@@ -452,20 +459,12 @@ footer p {
   position: relative;
 }
 
-.nav-links li a::after {
+.nav-links li a:hover {
   content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -5px;
-  left: 0;
-  background-color: rgb(85, 85, 85);
   transition: width 0.3s ease;
 }
 
-.nav-links li a:hover::after {
-  width: 100%;
-}
+
 
 /* Button hover effects */
 .btn {
@@ -599,33 +598,26 @@ footer p {
 
 /* Animações para cards e containers em todas as visualizações */
 .details-container,
-.color-container,
 .contact-info-container {
   transform: translateY(0);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .details-container:hover,
-.color-container:hover,
 .contact-info-container:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+.hamburger-icon{
+  transition: all 0.3s ease;
+  transform: rotate(0);
+}
+
 /* Animação do menu hamburger mais suave */
-.hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(6px, 6px);
-  transition: transform 0.3s ease;
-}
-
-.hamburger-icon.open span:nth-child(2) {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(6px, -6px);
-  transition: transform 0.3s ease;
+.hamburger-icon.open{
+  transition: all 0.3s ease;
+  transform: rotate(90deg);
 }
 
 /* Classes para animações de scroll */
