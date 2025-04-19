@@ -14,11 +14,12 @@
         <div class="logo">Matheus Dantas</div>
         <div>
             <ul class="nav-links">
-                <li><a href = "#about">Sobre</a></li>
-                <li><a href = "#experience">Experiências</a></li>
-                <li><a href = "#projects">Projetos</a></li>
-                <li><a href = "#contact">Contato</a></li>
+                <li><a href = "#about" data-translate="about">Sobre</a></li>
+                <li><a href = "#experience" data-translate="experience">Experiências</a></li>
+                <li><a href = "#projects" data-translate="projects">Projetos</a></li>
+                <li><a href = "#contact" data-translate="contact">Contato</a></li>
                 <li><button id="theme-toggle" class="theme-toggle">🌙</button></li>
+                <li><button id="language-toggle" class="language-toggle">🇺🇸</button></li>
             </ul>
         </div>
     </nav>
@@ -30,10 +31,11 @@
                 <img src="./assets/hamburger_icon.svg" class="icon">
             </div>
             <div class="menu-links">
-                <li><a href = "#about" onclick="toggleMenu()">Sobre</a></li>
-                <li><a href = "#experience" onclick="toggleMenu()">Experiências</a></li>
-                <li><a href = "#projects" onclick="toggleMenu()">Projetos</a></li>
-                <li><a href = "#contact" onclick="toggleMenu()">Contato</a></li>
+                <li><a href = "#about" onclick="toggleMenu()" data-translate="about">Sobre</a></li>
+                <li><a href = "#experience" onclick="toggleMenu()" data-translate="experience">Experiências</a></li>
+                <li><a href = "#projects" onclick="toggleMenu()" data-translate="projects">Projetos</a></li>
+                <li><a href = "#contact" onclick="toggleMenu()" data-translate="contact">Contato</a></li>
+                <li><button id="language-toggle-mobile" class="language-toggle">🇺🇸</button></li>
             </div>
         </div>
     </nav>
@@ -43,12 +45,12 @@
             <img src="./assets/profile-pic.jpg" alt="Matheus Dantas" id="profile__pic">
         </div>
         <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
+            <p class="section__text__p1" data-translate="hello">Hello, I'm</p>
             <h1 class="title">Matheus Dantas</h1>
-            <p class="section__text__p2">Computer Science Student</p>
+            <p class="section__text__p2" data-translate="student">Computer Science Student</p>
             <div class="btn-container">
-                <button class="btn btn-color" onclick="window.open('./assets/resume.pdf')">Baixar CV</button>
-                <button class="btn btn-color" onclick="location.href='./#contact'">Contato</button>
+                <button class="btn btn-color" id="cv-download" data-translate="download_cv">Baixar CV</button>
+                <button class="btn btn-color" onclick="location.href='./#contact'" data-translate="contact_button">Contato</button>
             </div>
             <div id="socials-container">
                 <img src="./assets/linkedin.png" alt="My Linkedin" class="icon" 
@@ -60,8 +62,8 @@
     </section>
 
     <section id="about">
-        <p class="section__text__p1">Conheça Mais</p>
-        <h1 class="title">Sobre Mim</h1>
+        <p class="section__text__p1" data-translate="know_more">Conheça Mais</p>
+        <h1 class="title" data-translate="about_me">Sobre Mim</h1>
         <div class="section-container">
           <div class="section__pic-container">
             <img
@@ -76,8 +78,8 @@
                   src="./assets/experience.png" alt="Experience icon" class="icon"
                 />
                 
-                <h3>Experiências</h3>
-                <p> Maratonas de programação:<br/>
+                <h3 data-translate="experience_title">Experiências</h3>
+                <p data-translate="experience_details"> Maratonas de programação:<br/>
                   (ICPC, OBI, Pizza++);<br/>
                     Monitor de Programação Procedimental;<br/>
                   Desenvolvedor Web Freelancer;
@@ -89,8 +91,8 @@
                   alt="Education icon"
                   class="icon"
                 />
-                <h3>Formação</h3>
-                <p>Bacharelado em CC na UFU (5º período);<br/>
+                <h3 data-translate="education_title">Formação</h3>
+                <p data-translate="education_details">Bacharelado em CC na UFU (5º período);<br/>
                     Téc. em Programação de Jogos pelo IFTM;<br/>
                     Inglês Nível C1A pelo CELIN;
                 </p>
@@ -98,18 +100,10 @@
             </div>
             <div class="text-container">
               <p>
-                <li>
-                    Estudando Ciência da Computação na Universidade Federal de Uberlândia (UFU);</br>
-                </li>
-                <li>
-                    Tenho um grande interesse na áreas de computação e programação, com foco em desenvolvimento web, backend e análise de dados.</br>
-                </li>
-                <li>
-                    Participo de maratonas de programação, sempre buscando aperfeiçoar minhas habilidades e aprender novas técnicas;
-                </li>
-                <li>
-                  Atualmente desenvolvendo projetos web com a @uaiweb_. Estou desenvolvendo um site de cursos digitais com React e Firebase;
-              </li>
+                <li data-translate="about_text_1">Estudando Ciência da Computação na Universidade Federal de Uberlândia (UFU);</li>
+                <li data-translate="about_text_2">Tenho um grande interesse na áreas de computação e programação, com foco em desenvolvimento web, backend e análise de dados.</li>
+                <li data-translate="about_text_3">Participo de maratonas de programação, sempre buscando aperfeiçoar minhas habilidades e aprender novas técnicas;</li>
+                <li data-translate="about_text_4">Atualmente desenvolvendo projetos web com a @uaiweb_. Estou desenvolvendo um site de cursos digitais com React e Firebase;</li>
               </p>
             </div>
           </div>
@@ -123,15 +117,27 @@
       </section>
 
       <section id="experience">
-        <p class="section__text__p1">Explore Minhas</p>
-        <h1 class="title">Experiências</h1>
+        <p class="section__text__p1" data-translate="explore_my">Explore Minhas</p>
+        <h1 class="title" data-translate="experiences">Experiências</h1>
         <div class="experience-details-container">
           <div class="about-containers">
             
             <div class="details-container">
-              <h2 class="experience-sub-title">Backend</h2>
+              <h2 class="experience-sub-title" data-translate="backend">Backend</h2>
               <div class="article-container">
-                <article>
+                
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Java/Spring</h3>
+                      <p data-translate="intermediate">Intermediário</p>
+                    </div>
+                  </article>
+                  <article>
                     <img
                       src="./assets/checkmark.png"
                       alt="Experience icon"
@@ -139,29 +145,7 @@
                     />
                     <div>
                       <h3>C++/C</h3>
-                      <p>Intermediário</p>
-                    </div>
-                  </article>
-                  <article>
-                    <img
-                      src="./assets/checkmark.png"
-                      alt="Experience icon"
-                      class="icon"
-                    />
-                    <div>
-                      <h3>Java</h3>
-                      <p>Intermediário</p>
-                    </div>
-                  </article>
-                  <article>
-                    <img
-                      src="./assets/checkmark.png"
-                      alt="Experience icon"
-                      class="icon"
-                    />
-                    <div>
-                      <h3>Spring</h3>
-                      <p>Básico</p>
+                      <p data-translate="intermediate">Intermediário</p>
                     </div>
                   </article>
                   <article>
@@ -172,7 +156,7 @@
                     />
                     <div>
                       <h3>Python</h3>
-                      <p>Intermediário</p>
+                      <p data-translate="intermediate">Intermediário</p>
                     </div>
                   </article>
                   <article>
@@ -183,7 +167,7 @@
                     />
                     <div>
                       <h3>R</h3>
-                      <p>Intermediário</p>
+                      <p data-translate="intermediate">Intermediário</p>
                     </div>
                   </article>
                 <article>
@@ -194,18 +178,7 @@
                   />
                   <div>
                     <h3>PostgreSQL</h3>
-                    <p>Avançado</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Git</h3>
-                    <p>Intermediário</p>
+                    <p data-translate="advanced">Avançado</p>
                   </div>
                 </article>
                 <article>
@@ -216,13 +189,13 @@
                   />
                   <div>
                     <h3>Firebase</h3>
-                    <p>Básico</p>
+                    <p data-translate="basic">Básico</p>
                   </div>
                 </article>
               </div>
             </div>
             <div class="details-container">
-                <h2 class="experience-sub-title">Frontend & Misc</h2>
+                <h2 class="experience-sub-title" data-translate="frontend_misc">Frontend & Misc</h2>
                 <div class="article-container">
                   <article>
                     <img
@@ -231,8 +204,30 @@
                       class="icon"
                     />
                     <div>
-                      <h3>HTML e Css</h3>
-                      <p>intermediário</p>
+                      <h3>JavaScript/React</h3>
+                      <p data-translate="intermediate">Intermediário</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Git</h3>
+                      <p data-translate="intermediate">Intermediário</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>HTML/CSS</h3>
+                      <p data-translate="intermediate">intermediário</p>
                     </div>
                   </article>
                   <article>
@@ -243,7 +238,7 @@
                     />
                     <div>
                       <h3>Tailwind</h3>
-                      <p>Básico</p>
+                      <p data-translate="basic">Básico</p>
                     </div>
                   </article>
                   <article>
@@ -253,8 +248,8 @@
                       class="icon"
                     />
                     <div>
-                      <h3>ReactJS e JS</h3>
-                      <p>Intermediário</p>
+                      <h3>English</h3>
+                      <p data-translate="advanced">Avançado C1A</p>
                     </div>
                   </article>
                   <article>
@@ -264,33 +259,10 @@
                       class="icon"
                     />
                     <div>
-                      <h3>Inglês</h3>
-                      <p>Avançado C1A</p>
+                      <h3>Unity</h3>
+                      <p data-translate="basic">Básico</p>
                     </div>
                   </article>
-                  <article>
-                      <img
-                        src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div>
-                        <h3>Blender</h3>
-                        <p>Básico</p>
-                      </div>
-                    </article>
-                    </article>
-                    <article>
-                      <img
-                        src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div>
-                        <h3>Unity</h3>
-                        <p>Básico</p>
-                      </div>
-                    </article>
                 </div>
               </div>
           </div>
@@ -304,8 +276,8 @@
       </section>
 
       <section id="projects">
-        <p class="section__text__p1">Explore Meus</p>
-        <h1 class="title">Projetos</h1>
+        <p class="section__text__p1" data-translate="explore_my_projects">Explore Meus</p>
+        <h1 class="title" data-translate="projects">Projetos</h1>
         <div class="experience-details-container">
           <div class="about-containers">
             <div class="details-container color-container">
@@ -341,7 +313,7 @@
                   class="project-img"
                 />
               </div>
-              <h2 class="experience-sub-title project-title">Em breve</h2>
+              <h2 class="experience-sub-title project-title" data-translate="coming_soon">Em breve</h2>
               <div class="btn-container">
                 
               </div>
@@ -358,8 +330,8 @@
       </section>
 
       <section id="contact">
-        <p class="section__text__p1">Entre em contato</p>
-        <h1 class="title">Contate Me</h1>
+        <p class="section__text__p1" data-translate="get_in_touch">Entre em contato</p>
+        <h1 class="title" data-translate="contact_me">Contate Me</h1>
         <div class="contact-info-upper-container">
           <div class="contact-info-container">
             <img
@@ -384,10 +356,10 @@
         <nav>
           <div class="nav-links-container">
             <ul class="nav-links">
-              <li><a href="#about">Sobre</a></li>
-              <li><a href="#experience">Experiências</a></li>
-              <li><a href="#projects">Projetos</a></li>
-              <li><a href="#contact">Contato</a></li>
+              <li><a href="#about" data-translate="about">Sobre</a></li>
+              <li><a href="#experience" data-translate="experience">Experiências</a></li>
+              <li><a href="#projects" data-translate="projects">Projetos</a></li>
+              <li><a href="#contact" data-translate="contact">Contato</a></li>
             </ul>
           </div>
         </nav>
