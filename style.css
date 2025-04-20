@@ -244,6 +244,11 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+  transition: all ease 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1)
 }
 
 /* Buttons */
