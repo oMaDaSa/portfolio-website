@@ -1,0 +1,35 @@
+.footer-container {
+  margin: 4rem 0;
+  padding: 2rem 0;
+  background: var(--bg-color);
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-nav {
+  margin-bottom: 2rem;
+}
+
+.footer-nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.footer-nav-link {
+  color: var(--font-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-nav-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+}
+
+.footer-copyright {
+  text-align: center;
+  color: var(--font-color);
+} 

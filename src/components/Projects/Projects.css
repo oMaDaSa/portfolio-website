@@ -1,0 +1,98 @@
+.projects-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 1rem;
+  color: var(--font-color);
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+  }
+}
+
+.project-card {
+  background: var(--bg-color);
+  border-radius: 2rem;
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--font-color);
+}
+
+@media (min-width: 768px) {
+  .project-card {
+    width: 45%;
+    max-width: 500px;
+  }
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.project-card h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+}
+
+.project-card p {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--font-color);
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  color: var(--highlight-color);
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+  cursor: pointer;
+} 

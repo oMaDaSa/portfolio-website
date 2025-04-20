@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  transition: background-color 0.3s ease;
+  width: 100%;
+  overflow-x: hidden;
+  padding-top: 17vh; /* Add padding to compensate for fixed navbar */
+}
+
+:root {
+  --primary-color: #6B46C1;
+  --secondary-color: #9F7AEA;
+  --font-color: #2D3748;
+  --bg-color: #F8F9FA;
+  --bg-color-rgb: 248, 249, 250;
+  --heading-color: #4A5568;
+  --border-color: #E2E8F0;
+  --highlight-color: #805AD5;
+}
+
+[data-theme="dark"] {
+  --primary-color: #BB86FC;
+  --secondary-color: #CF9FFF;
+  --font-color: #E1E1E1;
+  --bg-color: #160427;
+  --bg-color-rgb: 22, 4, 39;
+  --heading-color: #BB86FC;
+  --border-color: #2D2D2D;
+  --highlight-color: #CF9FFF;
+}
+
+/* Base styles for all screen sizes */
+section {
+  padding: 2rem 0.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.small-text {
+  font-size: 1.2rem;
+}
+
+.medium-text {
+  font-size: 1.5rem;
+}
+
+.section__pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__text {
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+}
+
+
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  border: none;
+  transform: scale(1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+}
+
+.btn-color {
+  background: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.btn-color:hover {
+  cursor: pointer;
+  background: var(--highlight-color);
+}
+
+.btn-color-secondary {
+  background: none;
+  color: var(--font-color);
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-secondary:hover {
+  cursor: pointer;
+  background: rgb(53, 53, 53);
+  color: var(--bg-color);
+}
+
+.icon {
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  transition: transform 300ms ease, filter 300ms ease;
+}
+
+.icon-arrow-about,
+.icon-arrow-experience {
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  display: block;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+[data-theme="dark"] .icon,
+[data-theme="dark"] .icon-about-experience,
+[data-theme="dark"] .icon-about-education,
+[data-theme="dark"] .icon-experience-checkmark,
+[data-theme="dark"] .profile-icon,
+[data-theme="dark"] .icon-arrow-about,
+[data-theme="dark"] .icon-arrow-experience,
+[data-theme="dark"] .contact-icon,
+[data-theme="dark"] .email-icon,
+[data-theme="dark"] .arrow {
+  filter: invert(1) brightness(0.9);
+}
+
+[data-theme="light"] .icon,
+[data-theme="light"] .icon-about-experience,
+[data-theme="light"] .icon-about-education,
+[data-theme="light"] .icon-experience-checkmark,
+[data-theme="light"] .icon-social-linkedin,
+[data-theme="light"] .icon-social-github,
+[data-theme="light"] .icon-arrow-about,
+[data-theme="light"] .icon-arrow-experience,
+[data-theme="light"] .contact-icon,
+[data-theme="light"] .email-icon,
+[data-theme="light"] .arrow {
+  filter: none;
+}
+
+/* Remove the general image inversion rules */
+[data-theme="dark"] img {
+  filter: none;
+}
+
+[data-theme="dark"] .profile-pic {
+  filter: none;
+}
+
+[data-theme="light"] img {
+  filter: none;
+}
+
+/* Tablet styles (768px and up) */
+@media (min-width: 768px) {
+  section {
+    padding: 4rem 1rem;
+  }
+
+  .section__text__p2 {
+    font-size: 1.75rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+
+  .btn-container {
+    flex-direction: row;
+  }
+}
+
+/* Desktop styles (1024px and up) */
+@media (min-width: 1024px) {
+  section {
+    padding: 4rem 2rem;
+  }
+
+  .section__pic-container {
+    width: 400px;
+    height: 400px;
+  }
+} 
