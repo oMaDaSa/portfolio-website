@@ -50,13 +50,13 @@
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   width: 100%;
-  max-width: 300px;
+  max-width: 50vw;
   color: var(--font-color);
 }
 
 @media (min-width: 768px) {
   .skill-box {
-    max-width: 250px;
+    max-width: 30vw;
   }
 }
 
@@ -88,31 +88,3 @@
   height: 24px;
 }
 
-.skill-item span {
-  font-size: 0.9rem;
-  color: var(--font-color);
-}
-
-.arrow {
-  position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
-  cursor: pointer;
-  display: none;
-}
-
-@media (min-width: 1024px) {
-  .arrow {
-    display: block;
-  }
-}
-
-.experience__content {
-  background-color: var(--bg-color);
-  border: 1px solid var(--border-color);
-  color: var(--font-color);
-}
-
-.experience__content h3 {
-  color: var(--heading-color);
-} 

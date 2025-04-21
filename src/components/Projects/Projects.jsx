@@ -8,8 +8,8 @@ const Projects = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="projects" className="projects-section">
-      <p className="section__text__p1">{t('explore_my_projects')}</p>
+    <section id="projects" className="section">
+      <p className="small_text">{t('explore_my_projects')}</p>
       <h1 className="title">{t('projects')}</h1>
       
       <div className="projects-container">
@@ -42,16 +42,13 @@ const Projects = () => {
             <p>
               This project is currently in development. More details will be available soon.
             </p>
+            <button 
+                className="btn btn-color">
+                Soon
+              </button>
           </div>
         </div>
       </div>
-      
-      <img 
-        src={arrowIcon} 
-        alt="Arrow icon" 
-        className="icon arrow" 
-        onClick={() => window.location.href = '#contact'}
-      />
     </section>
   );
 };

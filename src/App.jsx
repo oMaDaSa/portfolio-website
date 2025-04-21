@@ -21,9 +21,13 @@ const App = () => {
     <ThemeProvider theme={{ mode: theme }}>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <Profile />
+      <hr/>
       <About />
+      <hr/>
       <Experience />
+      <hr/>
       <Projects />
+      <hr/>
       <Contact />
       <Footer />
     </ThemeProvider>

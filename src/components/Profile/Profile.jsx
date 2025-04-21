@@ -13,7 +13,7 @@ const Profile = () => {
   };
 
   return (
-    <section className="section">
+    <section id="profile" className="section">
       <div className="profile-container">
         <div className="profile-pic">
           <img src={profilePic} alt="Matheus Dantas" className="img-profile" />

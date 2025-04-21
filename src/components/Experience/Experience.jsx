@@ -24,17 +24,17 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="section-experience experience-section">
-      <p className="section__text__p1">{t('explore_my')}</p>
+    <section id="experience" className="section">
+      <p className="small_text">{t('explore_my')}</p>
       <h1 className="title">{t('experiences')}</h1>
       
-      <div className="container-experience experience-container">
-        <div className="container-experience-skills skills-container">
-          <div className="container-experience-backend skill-box">
+      <div className="experience-container">
+        <div className="skills-container">
+          <div className="skill-box">
             <h2>{t('backend')}</h2>
-            <div className="list-experience-backend skill-list">
+            <div className="skill-list">
               {backendSkills.map((skill, index) => (
-                <div key={index} className="item-experience-backend skill-item">
+                <div key={index} className="skill-item">
                   <img src={checkmarkIcon} alt="Checkmark" className="icon-experience-checkmark" />
                   <div>
                     <h3>{skill.name}</h3>
@@ -45,11 +45,11 @@ const Experience = () => {
             </div>
           </div>
           
-          <div className="container-experience-frontend skill-box">
+          <div className="skill-box">
             <h2>{t('frontend_misc')}</h2>
-            <div className="list-experience-frontend skill-list">
+            <div className="skill-list">
               {frontendSkills.map((skill, index) => (
-                <div key={index} className="item-experience-frontend skill-item">
+                <div key={index} className="skill-item">
                   <img src={checkmarkIcon} alt="Checkmark" className="icon-experience-checkmark" />
                   <div>
                     <h3>{skill.name}</h3>
@@ -62,12 +62,7 @@ const Experience = () => {
         </div>
       </div>
       
-      <img 
-        src={arrowIcon} 
-        alt="Arrow icon" 
-        className="icon-arrow-experience arrow" 
-        onClick={() => window.location.href = '#projects'}
-      />
+
     </section>
   );
 };

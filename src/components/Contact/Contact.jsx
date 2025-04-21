@@ -7,14 +7,14 @@ const Contact = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="contact" className="contact-section">
-      <p className="section__text__p1">{t('get_in_touch')}</p>
+    <section id="contact" className="section">
+      <p className="small_text">{t('get_in_touch')}</p>
       <h1 className="title">{t('contact_me')}</h1>
       
       <div className="contact-container">
         <div className="contact-info">
           <div className="contact-card">
-            <img src={emailIcon} alt="Email icon" className="icon contact-icon email-icon" />
+            <img src={emailIcon} alt="Email icon" className="icon contact-icon email-icon" onClick={() => window.open('mailto:matheusdsantana07@gmail.com', '_blank')}/>
             <p>
               <a href="mailto:matheusdsantana07@gmail.com">
                 matheusdsantana07@gmail.com
@@ -23,7 +23,8 @@ const Contact = () => {
           </div>
           
           <div className="contact-card">
-            <img src={linkedinIcon} alt="LinkedIn icon" className="icon contact-icon" />
+            <img src={linkedinIcon} alt="LinkedIn icon" className="icon contact-icon" 
+            onClick={() => window.open('https://www.linkedin.com/in/matheusdsantana/', '_blank')}/>
             <p>
               <a href="https://www.linkedin.com/in/matheusdsantana/" target="_blank" rel="noopener noreferrer">
                 LinkedIn

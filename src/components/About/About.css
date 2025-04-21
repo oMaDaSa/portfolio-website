@@ -18,6 +18,7 @@
   margin: 0 auto;
 }
 
+
 @media (min-width: 768px) {
   .section-container {
     max-width: 1200px;
@@ -40,22 +41,23 @@
   }
 }
 
-.pic-container {
+.about-pic {
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
 }
 
-@media (min-width: 1024px) {
-  .pic-container {
+@media (min-width: 768px) {
+  .about-pic {
     max-width: 400px;
   }
 }
 
-.pic-container img {
+.about-pic img {
   width: 100%;
   height: auto;
   border-radius: 2rem;
+  border: solid 2px var(--border-color)
 }
 
 .details-container {
@@ -125,30 +127,14 @@
 .text-container {
   width: 100%;
   max-width: 800px;
-  padding: 0.5rem;
   text-align: center;
-  margin: 1rem auto;
+  margin: auto;
   color: var(--font-color);
+  padding: 1.5rem;
 }
 
 .text-container li {
-  margin: 1rem 0;
-  list-style-type: none;
-  text-align: center;
-  line-height: 1.5;
+  margin: 0.5rem;
+  text-align: justify;
   color: var(--font-color);
 }
-
-.arrow {
-  position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
-  cursor: pointer;
-  display: none;
-}
-
-@media (min-width: 1024px) {
-  .arrow {
-    display: block;
-  }
-} 

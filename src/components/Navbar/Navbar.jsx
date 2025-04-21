@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Navbar.css';
+import usa_flag from '../../assets/usa_flag.svg'
+import br_flag from '../../assets/br_flag.svg'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,7 +52,7 @@ const Navbar = () => {
                 className="language-toggle"
                 onClick={toggleLanguage}
               >
-                {language === 'pt' ? '🇺🇸' : '🇧🇷'}
+                {language === 'pt' ?  <img className = "flag" src={usa_flag}/> : <img  className = "flag" src={br_flag}/>}
               </button>
             </li>
           </ul>
@@ -59,31 +61,33 @@ const Navbar = () => {
 
       <nav id="hamburger-nav">
         <div className="logo">Matheus Dantas</div>
-        <button 
-          id="theme-toggle-mobile" 
-          className="theme-toggle"
-          onClick={toggleTheme}
-        >
-          {theme === 'light' ? '🌙' : '☀️'}
-        </button>
-        <div className="hamburger-menu">
-          <div className="hamburger-icon" onClick={toggleMenu}>
-            <span className={`icon ${isMenuOpen ? 'open' : ''}`}></span>
-          </div>
-          <div className={`menu-links ${isMenuOpen ? 'open' : ''}`}>
-            <li><a href="#about" onClick={toggleMenu}>{t('about')}</a></li>
-            <li><a href="#experience" onClick={toggleMenu}>{t('experience')}</a></li>
-            <li><a href="#projects" onClick={toggleMenu}>{t('projects')}</a></li>
-            <li><a href="#contact" onClick={toggleMenu}>{t('contact')}</a></li>
-            <li>
-              <button 
-                id="language-toggle-mobile" 
-                className="language-toggle"
-                onClick={toggleLanguage}
-              >
-                {language === 'pt' ? '🇺🇸' : '🇧🇷'}
-              </button>
-            </li>
+        <div className="mobile-controls">
+          <button 
+            id="theme-toggle-mobile" 
+            className="theme-toggle"
+            onClick={toggleTheme}
+          >
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
+          <button 
+            id="language-toggle-mobile" 
+            className="language-toggle"
+            onClick={toggleLanguage}
+          >
+            {language === 'pt' ? <img className="flag" src={usa_flag} alt="Switch to English" /> : <img className="flag" src={br_flag} alt="Mudar para Português" />}
+          </button>
+          <div className="hamburger-menu">
+            <div className="hamburger-icon" onClick={toggleMenu}>
+              <span className={isMenuOpen ? 'open' : ''}></span>
+              <span className={isMenuOpen ? 'open' : ''}></span>
+              <span className={isMenuOpen ? 'open' : ''}></span>
+            </div>
+            <div className={`menu-links ${isMenuOpen ? 'open' : ''}`}>
+              <li><a href="#about" onClick={toggleMenu}>{t('about')}</a></li>
+              <li><a href="#experience" onClick={toggleMenu}>{t('experience')}</a></li>
+              <li><a href="#projects" onClick={toggleMenu}>{t('projects')}</a></li>
+              <li><a href="#contact" onClick={toggleMenu}>{t('contact')}</a></li>
+            </div>
           </div>
         </div>
       </nav>
