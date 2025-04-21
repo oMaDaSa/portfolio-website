@@ -33,7 +33,13 @@ const resources = {
       'experience_details': 'Programming Marathons:<br/>(ICPC, OBI, Pizza++);<br/>Procedural Programming Monitor;<br/>Web Developer Freelancer;',
       'education_details': 'Bachelor\'s in CS at UFU (5th semester);<br/>Technical in Game Programming at IFTM;<br/>English Level C1A at CELIN;',
       'frontend_misc': 'Frontend & Misc',
-      'backend': 'Backend'
+      'backend': 'Backend',
+      'movielog_title': 'MovieLog RESTful API',
+      'movielog_description': 'MovieLog RESTful API is a powerful backend system designed to manage movie data efficiently. It provides a robust set of features for managing movies, including CRUD operations, detailed movie information, and user authentication.',
+      'github': 'Github',
+      'live_demo': 'Live Demo',
+      'wip_description': 'This project is currently in development. More details will be available soon.',
+      'soon': 'Soon'
     }
   },
   pt: {
@@ -67,7 +73,13 @@ const resources = {
       'experience_details': 'Maratonas de programação:<br/>(ICPC, OBI, Pizza++);<br/>Monitor de Programação Procedimental;<br/>Desenvolvedor Web Freelancer;',
       'education_details': 'Bacharelado em CC na UFU (5º período);<br/>Téc. em Programação de Jogos pelo IFTM;<br/>Inglês Nível C1A pelo CELIN;',
       'frontend_misc': 'Frontend & Misc',
-      'backend': 'Backend'
+      'backend': 'Backend',
+      'movielog_title': 'MovieLog API RESTful',
+      'movielog_description': 'MovieLog API RESTful é um sistema backend poderoso projetado para gerenciar dados de filmes de forma eficiente. Ele fornece um conjunto robusto de recursos para gerenciar filmes, incluindo operações CRUD, informações detalhadas sobre filmes e autenticação de usuários.',
+      'github': 'Github',
+      'live_demo': 'Demo ao Vivo',
+      'wip_description': 'Este projeto está atualmente em desenvolvimento. Mais detalhes estarão disponíveis em breve.',
+      'soon': 'Em breve'
     }
   }
 };

@@ -50,7 +50,7 @@
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   width: 100%;
-  max-width: 50vw;
+  max-width: 90vw;
   color: var(--font-color);
 }
 
@@ -81,6 +81,7 @@
   width: 100%;
   padding: 0.5rem;
   color: var(--font-color);
+  justify-content: center;
 }
 
 .skill-item img {
