@@ -40,13 +40,13 @@ const Profile = () => {
             <img 
               src={linkedinIcon} 
               alt="My LinkedIn" 
-              className="profile-icon"
+              className="profile-icon icon"
               onClick={() => window.open('https://www.linkedin.com/in/matheusdsantana/')}
             />
             <img 
               src={githubIcon} 
               alt="My Github" 
-              className="profile-icon"
+              className="profile-icon icon"
               onClick={() => window.open('https://github.com/oMaDaSa')}
             />
           </div>

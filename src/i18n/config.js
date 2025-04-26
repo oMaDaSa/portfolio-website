@@ -88,10 +88,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'pt',
-    interpolation: {
-      escapeValue: false
-    }
+    lng: 'pt'
   });
 
 export default i18n; 

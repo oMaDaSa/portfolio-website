@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <>
       <nav id="desktop-nav">
-        <div className="logo">Matheus Dantas</div>
+        <li className="logo" ><a className="logo-link" href="#" >Matheus Dantas</a></li>
         <div>
           <ul className="nav-links">
             <li><a href="#about">{t('about')}</a></li>

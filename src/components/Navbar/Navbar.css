@@ -17,8 +17,19 @@
 .logo {
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--heading-color);
+  list-style: none;
+  color: var(--primary-color);
   transition: font-size 0.3s ease;
+}
+
+.logo-link{
+  color: var(--primary-color);
+  transition: all 0.2s ease-in-out
+}
+
+.logo-link:hover {
+  color: var(--secondary-color);
+  text-shadow: 0 0 0.2em var(--secondary-color), 0 0 1px var(--secondary-color);
 }
 
 .nav-links {
@@ -59,9 +70,8 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgba(var(--bg-color-rgb), 0.8);
+  background-color: rgba(var(--bg-color-rgb), 0.6);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -104,9 +114,8 @@
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: rgba(var(--bg-color-rgb), 0.8);
+  background-color: rgba(var(--bg-color-rgb), 0.6);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   width: 200px;
   max-height: 0;
   overflow: hidden;
@@ -116,6 +125,7 @@
 .menu-links.open {
   max-height: 300px;
   padding: 1rem 0;
+  border-radius: 15px;
 }
 
 .menu-links li {

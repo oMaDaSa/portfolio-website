@@ -94,7 +94,6 @@ section {
 }
 
 
-
 .icon {
   cursor: pointer;
   height: 1.5rem;
@@ -106,43 +105,11 @@ section {
   transform: scale(1.1);
 }
 
-[data-theme="dark"] .icon,
-[data-theme="dark"] .icon-about-experience,
-[data-theme="dark"] .icon-about-education,
-[data-theme="dark"] .icon-experience-checkmark,
-[data-theme="dark"] .profile-icon,
-[data-theme="dark"] .icon-arrow-about,
-[data-theme="dark"] .icon-arrow-experience,
-[data-theme="dark"] .contact-icon,
-[data-theme="dark"] .email-icon,
-[data-theme="dark"] .arrow {
+[data-theme="dark"] .icon {
   filter: invert(1) brightness(0.9);
 }
 
-[data-theme="light"] .icon,
-[data-theme="light"] .icon-about-experience,
-[data-theme="light"] .icon-about-education,
-[data-theme="light"] .icon-experience-checkmark,
-[data-theme="light"] .icon-social-linkedin,
-[data-theme="light"] .icon-social-github,
-[data-theme="light"] .icon-arrow-about,
-[data-theme="light"] .icon-arrow-experience,
-[data-theme="light"] .contact-icon,
-[data-theme="light"] .email-icon,
-[data-theme="light"] .arrow {
-  filter: none;
-}
-
-/* Remove the general image inversion rules */
-[data-theme="dark"] img {
-  filter: none;
-}
-
-[data-theme="dark"] .profile-pic {
-  filter: none;
-}
-
-[data-theme="light"] img {
+[data-theme="light"] .icon{
   filter: none;
 }
 
@@ -160,20 +127,8 @@ section {
     font-size: 3rem;
   }
 
-
   .btn-container {
     flex-direction: row;
   }
 }
 
-/* Desktop styles (1024px and up) */
-@media (min-width: 1024px) {
-  section {
-    padding: 4rem 2rem;
-  }
-
-  .section__pic-container {
-    width: 400px;
-    height: 400px;
-  }
-} 
