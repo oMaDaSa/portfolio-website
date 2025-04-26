@@ -10,7 +10,7 @@ const resources = {
       'contact': 'Contact',
       'hello': 'Hello, I\'m',
       'student': 'Computer Science Student',
-      'download_cv': 'Download CV',
+      'download_cv': 'Résumé',
       'contact_button': 'Contact',
       'know_more': 'Get to Know',
       'about_me': 'About Me',
@@ -50,7 +50,7 @@ const resources = {
       'contact': 'Contato',
       'hello': 'Olá, eu sou',
       'student': 'Estudante de Ciência da Computação',
-      'download_cv': 'Baixar CV',
+      'download_cv': 'Currículo',
       'contact_button': 'Contato',
       'know_more': 'Conheça Mais',
       'about_me': 'Sobre Mim',
@@ -88,10 +88,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'pt',
-    interpolation: {
-      escapeValue: false
-    }
+    lng: 'pt'
   });
 
 export default i18n; 

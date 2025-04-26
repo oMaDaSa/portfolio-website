@@ -35,7 +35,7 @@ const Experience = () => {
             <div className="skill-list">
               {backendSkills.map((skill, index) => (
                 <div key={index} className="skill-item">
-                  <img src={checkmarkIcon} alt="Checkmark" className="icon-experience-checkmark" />
+                  <img src={checkmarkIcon} alt="Checkmark" className="icon" />
                   <div>
                     <h3>{skill.name}</h3>
                     <p>{t(skill.level)}</p>
@@ -50,7 +50,7 @@ const Experience = () => {
             <div className="skill-list">
               {frontendSkills.map((skill, index) => (
                 <div key={index} className="skill-item">
-                  <img src={checkmarkIcon} alt="Checkmark" className="icon-experience-checkmark" />
+                  <img src={checkmarkIcon} alt="Checkmark" className="icon" />
                   <div>
                     <h3>{skill.name}</h3>
                     <p>{t(skill.level)}</p>
