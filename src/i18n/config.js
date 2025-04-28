@@ -88,7 +88,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'pt'
+    lng: navigator.language.split('-')[0] || 'pt',
+    fallbackLng: 'pt',
   });
 
 export default i18n; 

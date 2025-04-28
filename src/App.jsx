@@ -11,10 +11,11 @@ import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 
 const App = () => {
-  const [theme, setTheme] = useState('light')
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [theme, setTheme] = useState(prefersDark ? 'dark' : 'light');
 
   const toggleTheme = () => {
-    setTheme(prevTheme === 'light' ? 'dark' : 'light')
+    setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
   }
 
   return (
