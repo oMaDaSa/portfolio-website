@@ -4,9 +4,9 @@ import './Navbar.css';
 import usa_flag from '../../assets/usa_flag.svg'
 import br_flag from '../../assets/br_flag.svg'
 
-const Navbar = () => {
+const Navbar = ({theme, toggleTheme}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState('light');
+
   const { t, i18n } = useTranslation();
   const language = i18n.language;
 
@@ -16,10 +16,6 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
   const toggleLanguage = () => {
