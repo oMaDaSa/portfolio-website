@@ -10,17 +10,14 @@ const Experience = () => {
     { name: 'Java/Spring', level: 'intermediate' },
     { name: 'C++/C', level: 'intermediate' },
     { name: 'Python', level: 'intermediate' },
-    { name: 'R', level: 'intermediate' },
-    { name: 'PostgreSQL', level: 'advanced' },
-    { name: 'Firebase', level: 'basic' }
+    { name: 'PostgreSQL', level: 'advanced' }
   ];
 
   const frontendSkills = [
-    { name: 'JavaScript/React', level: 'intermediate' },
+    { name: 'JavaScript', level: 'intermediate' },
+    { name: 'React', level: 'basic' },
     { name: 'Git', level: 'intermediate' },
-    { name: 'HTML/CSS', level: 'intermediate' },
-    { name: 'Tailwind', level: 'basic' },
-    { name: 'English', level: 'advanced' }
+    { name: 'HTML/CSS', level: 'intermediate' }
   ];
 
   return (

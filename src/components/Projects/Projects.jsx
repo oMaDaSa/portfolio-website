@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import springIcon from '../../assets/spring.svg';
-import wipIcon from '../../assets/wip.png';
+import dinoIcon from '../../assets/dino_runner.png';
+import lambdaIcon from '../../assets/lambda.svg';
 import arrowIcon from '../../assets/arrow.png';
 import './Projects.css';
 
@@ -37,15 +38,41 @@ const Projects = () => {
           </div>
           
           <div className="project-card">
-            <img src={wipIcon} alt="Project WIP" />
-            <h3 className="project-title">{t('coming_soon')}</h3>
+            <img src={dinoIcon} alt="AI Dino Runner" />
+            <h3 className="project-title">{t('dino_title')}</h3>
             <p>
-              {t('wip_description')}
+              {t('dino_description')}
             </p>
-            <button 
-                className="btn btn-color">
-                {t('soon')}
+            <div className="project-links">
+              <button 
+                className="btn btn-color"
+                onClick={() => window.open('https://github.com/oMaDaSa/AI-DINO-RUNNER', '_blank')}
+              >
+                {t('github')}
               </button>
+            </div>
+          </div>
+          
+          <div className="project-card">
+            <img src={lambdaIcon} alt="LimpAISPC" />
+            <h3 className="project-title">{t('limpaispc_title')}</h3>
+            <p>
+              {t('limpaispc_description')}
+            </p>
+            <div className="project-links">
+              <button 
+                className="btn btn-color"
+                onClick={() => window.open('https://github.com/oMaDaSa/LimpAISPC', '_blank')}
+              >
+                {t('github')}
+              </button>
+              <button 
+                className="btn btn-color"
+                onClick={() => window.open('https://omadasa.github.io/LimpAISPC/', '_blank')}
+              >
+                {t('live_demo')}
+              </button>
+            </div>
           </div>
         </div>
       </div>
